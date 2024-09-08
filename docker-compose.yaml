@@ -31,7 +31,12 @@ services:
     build:
       context: ./elt_script
       dockerfile: Dockerfile
-    command: ["python"]
+    command: ["python", "elt_script.py"]
+    networks:
+      - elt_network
+    depends_on:
+      - source_postgres
+      - destination_postgres
 
 
 networks:
