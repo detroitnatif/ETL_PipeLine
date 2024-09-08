@@ -53,3 +53,23 @@ dump_command = [
 ]
 
 subprocess_env = dict(PGPASSWORD=source_config['password'])
+
+subprocess.run(dump_command, env=subprocess_env, check=True)
+
+
+# MOVE SRC TO DEST
+
+load_command = [
+    'psql',
+    '-h', destination_config['host'],
+    '-u', destination_config['user'],
+    '-d', destination_config['dbname'],
+    '-a', '-f', 'data_dump.sql',
+]
+
+subprocess_env = dict(PGPASSWORD=destination_config['password'])
+
+subprocess.run(load_command, env=subprocess_env, check=True)
+
+print("ending script")
+
