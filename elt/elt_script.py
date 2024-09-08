@@ -27,4 +27,29 @@ if not wait_for_postgres(host='source_postgres'):
     exit(1)
 
 print("Starting ELT")
-        
+
+source_config = {
+    'dbname': 'source_db',
+    'user': 'postgres',
+    'password': 'secret',
+    'host': 'source_postgres'
+}
+
+destination_config = {
+    'dbname': 'destination_db',
+    'user': 'postgres',
+    'password': 'secret',
+    'host:': 'destination_db',
+}
+
+dump_command = [
+    'pg_dump',
+    '-h', source_config['host'],
+    '-u', source_config['user'],
+    '-d', source_config['dbname'],
+    '-f', 'data_dump.sql',
+    '-w'
+
+]
+
+subprocess_env = dict(PGPASSWORD=source_config['password'])
