@@ -1,0 +1,31 @@
+[0m12:09:34.528576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105339220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058aa420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058a9f10>]}
+
+
+============================== 12:09:34.534131 | 0f641b15-8136-4a96-a267-ce8ba1e87332 ==============================
+[0m12:09:34.534131 [info ] [MainThread]: Running with dbt=1.8.6
+[0m12:09:34.535099 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/tylerklimas/.dbt', 'log_format': 'default', 'quiet': 'False', 'printer_width': '80', 'target_path': 'None', 'empty': 'None', 'write_json': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init', 'partial_parse': 'True', 'static_parser': 'True', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'debug': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'introspect': 'True'}
+[0m12:09:34.562270 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/Users/tylerklimas/.dbt')}
+[0m12:09:34.562998 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m12:09:45.674512 [debug] [MainThread]: Starter project path: /opt/anaconda3/lib/python3.12/site-packages/dbt/include/starter_project
+[0m12:09:45.689781 [info ] [MainThread]: 
+Your new dbt project "custom_postgres" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:09:45.690397 [info ] [MainThread]: Setting up your profile.
+[0m12:11:30.317257 [info ] [MainThread]: Profile custom_postgres written to /Users/tylerklimas/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:11:30.342252 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 115.93703, "process_user_time": 1.81058, "process_kernel_time": 0.469622, "process_mem_max_rss": "90300416", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:11:30.344388 [debug] [MainThread]: Command `dbt init` succeeded at 12:11:30.344064 after 115.94 seconds
+[0m12:11:30.345326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059c3170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059c2b40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059e3260>]}
+[0m12:11:30.346145 [debug] [MainThread]: Flushing usage events
